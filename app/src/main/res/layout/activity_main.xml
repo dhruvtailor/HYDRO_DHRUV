@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Electricity Bill Calculator"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Morning Usage (kwh)"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etMorningUsage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:hint="Enter morning usage in kwh"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
+        android:text="Evening Usage (kwh)"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etEveningUsage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:hint="Enter evening usage in kwh"/>
+
+    <Switch
+        android:id="@+id/swReusableEnergy"
+        android:layout_marginTop="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use renewable energy source?"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
+        android:textColor="#ff0000"
+        android:background="#FDBFBF"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:text="ERROR: All fields must be filled in."
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_marginTop="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="Calculate"
+            android:backgroundTint="#2196F3"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Reset"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charge Breakdown"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvChargeBreakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTotalPayable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#ECEC00"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
